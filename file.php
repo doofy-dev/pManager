@@ -114,7 +114,9 @@ header('Content-Type: text/html; charset=utf-8');
 
 	function addElement($name){
 		$project=json_decode(file_get_contents('projects/'.$name.'.json'),true);
+		print_r($project);
 		$project['inBag'][]=array("name"=>$_POST['name'],"description"=>$_POST['description'],"weight"=>$_POST['weight'],"developer"=>"","type"=>$_POST['type'],"time_taken"=>"0");
+		print_r($project);
 		unlink('projects/'.$name.'.json');
 		$fp=fopen('projects/'.$name.'.json', "w");
 		fwrite($fp, json_encode($project));

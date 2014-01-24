@@ -70,6 +70,7 @@ $(document).on('click','*',function(){
 				"type":$('.type option:selected').val(),
 				"weight":$('.weight').val()
 			}).done(function(data){
+				console.log(data)
 				$('#dialog').dialog('close');
 				project.handleState();
 			})
@@ -127,38 +128,21 @@ $(document).on('click','.updateelement input[type="button"]',function(){
 	var file=spliturl[1].split('=')
 	if(type=="updateproonlist"){
 			//alert("ASD")
+			//alert('update')
 			$.post("file.php?type=updatePro&value="+file[1],{
 							"weight":$('.weight').val(),
 							"id":currentkey
 						}).done(function(data){
-							console.log(data)
+						//	console.log(data)
 							$('#dialog').dialog('close');
 							project.handleState();
 					})
 		}
 	
 	else{
-		if(type!='updateelemenonlist'){
-			$.post("file.php?type=moveElement&value="+file[1],{
-				"original":currentkey,
-				"newkateg":type
-			}).done(function(data){
-				$('#dialog').dialog('close');
-				project.handleState();
-			})
-		}
-		else
-		{
-			if(type=='delelement'){
-					$.post("file.php?type=delElement&value="+file[1],{
-						"delete":currentkey
-					}).done(function(){
-						$('#dialog').dialog('close');
-						project.handleState();
-					})
-				}
-				else{
-					$.post("file.php?type=updateElement&value="+file[1],{
+		if(type=="addelementolist"){
+			//alert('add')
+			$.post("file.php?type=updateElement&value="+file[1],{
 							"name":$('.elementname').val(),
 							"description":$('.elementdesc').val(),
 							"type":$('.type option:selected').val(),
@@ -167,16 +151,41 @@ $(document).on('click','.updateelement input[type="button"]',function(){
 							"weight":$('.weight').val(),
 							"id":currentkey
 						}).done(function(data){
+							//console.log(data)
 							$('#dialog').dialog('close');
 							project.handleState();
-					})}
+					})
+					}
+		else
+		{
+			if(type=='delelement'){
+				//alert('del')
+					$.post("file.php?type=delElement&value="+file[1],{
+						"delete":currentkey
+					}).done(function(data){
+						//	console.log(data)
+						$('#dialog').dialog('close');
+						project.handleState();
+					})
+				}
+				else{
+					//alert("else")
+					$.post("file.php?type=moveElement&value="+file[1],{
+						"original":currentkey,
+						"newkateg":type
+					}).done(function(data){
+						//	console.log(data)
+						$('#dialog').dialog('close');
+						project.handleState();
+					})
+				}
 			}
 		}
 })
 
 $(document).on('click','header a',function(){
 		if($(this).attr('alt')!=""){
-			template.dialog("Új project",template.projectForm(null,false))
+			template.dialog("Új projekt",template.projectForm(null,false))
 		}
 })
 

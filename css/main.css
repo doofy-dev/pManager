@@ -1,0 +1,259 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	display: block;
+	width: 100%;
+	height: 50px;
+	background: #666;
+	color: #fff;
+}
+header a{
+	display: inline-block;
+	height: 50px;
+	line-height: 40px;
+	height: 40px;
+	margin-top: 5px;
+	color: #FFF;
+	text-decoration: none;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #999;
+	margin-left: 5px;
+	font-weight: normal;
+	font-size: 1em;
+	letter-spacing: 1px;
+}
+header a:hover{
+	opacity: 0.6;
+}
+.project{
+	display: inline-block;
+	width: 45%;
+	background: #e14034;
+	margin-top: 2.4%;
+	margin-left: 2.4%;
+	text-align: center;
+	border:thin solid black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.project:hover{
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.current_project{
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+}
+.current_project h2, .current_project h3{
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+.current_project strong{
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.current_project a{
+	display: block;
+	width: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+.table{
+	display: block;
+	width: 95%;
+	margin: 0 auto;
+	border: thin solid black;
+	border-left: none;
+	overflow-x:hidden;
+}
+.table section{
+	display: table;
+	width: 100%;
+	overflow: visible;
+}
+aside{
+	display: table-row;
+	float: left;
+	width: 24.9%;
+	border-left: thin solid black;
+	height: 100%;
+}
+.donerow{
+	display: table-row;
+	float: left;
+	width: 24.85% !important;
+	height: 100%;
+}
+.row section{
+	font-size: 14px;
+}
+.row h3{
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: 0px !important;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #CCC;
+}
+.row section{
+	display: block;
+	width: 80% !important;
+	padding: 5%;
+	margin: 10px auto;
+}
+.row section strong{
+	display: block;
+	width: 100%;
+	border-bottom: thin dashed black;
+}
+.bug{
+	background: orange;
+}
+.feature{
+	background: cyan;
+}
+.request{
+	background: pink;
+}
+
+.user{
+	display: block;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: thin dashed #333;
+}
+
+.user strong{
+	display: inline-block;
+	width: 90%;
+	text-indent:10px;
+}
+.user a{
+	display: inline-block;
+	width: 9%;
+	text-align: center;
+	text-decoration: none;
+	background: red;
+	color:white !important;
+}
+input{
+	display: inline-block;
+	border: thin solid black;
+	border-radius: 5px;
+	padding: 5px;
+	line-height: 20px;
+	margin: 0 auto;
+}
+.edit{
+	display: block;
+	width: 32px !important;
+	height: 32px;
+	float: right;
+	background: url('../img/mono-icons/gear32.png');
+	position: relative;
+	top: -100px;
+}
+.addpro{
+	display: block;
+	width: 32px !important;
+	height: 32px;
+	float: right;
+	background: url('../img/mono-icons/turnright32.png');
+	position: relative;
+	top: -100px;
+	right: 40px;
+}
+.addelement{
+	display: block;
+	width: 32px !important;
+	height: 32px;
+	float: right;
+	background: url('../img/mono-icons/plus32.png');
+	position: relative;
+	top: -100px;
+	right: 20px;
+}
+.graphtable{
+	display: block;
+	width: 100%;
+	margin: 20px auto;
+	border: thin solid black;
+}
+.graphtable strong{
+	display: block;
+	text-align: left;
+	padding: 10px;
+	padding-bottom: 0px;
+	margin: 0px;
+}
+.graphtable small{
+	display:block;
+	margin-left: 30px;
+}
+.percontainer{
+	display: block;
+	width: 99%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	height: 40px;
+	overflow: hidden;
+}
+.percontainer .percval{
+	display: block;
+	float: left;
+	width: 100%;
+	height: 40px;
+	position: relative;
+	z-index: 10;
+}
+.percval div{
+	display: block;
+	width: 10%;
+	height: 40px;
+	background:#333 url('images/animated-overlay.gif');
+	/*#e14034*/
+}
+.percentage{
+	display: block;
+	width: 100%;
+	height: 40px;
+	position: relative;
+	z-index: 20;
+	float: left;
+	margin-top: -40px;
+	line-height: 40px;
+	color: white;
+	text-align: center;
+	background:rgba(0,0,0,0.6);
+}
+.row section section{
+	padding: 0;
+	margin-bottom: -10px;
+	width: 100% !important;
+}
+.row section section .percentage{
+	height: 40px !important;
+	margin-top: -40px;
+	line-height: 40px;
+	width: 100%;
+}
+
+.row section section .percval{
+	height: 40px !important;
+}
+.row section section .percval div{
+	margin-top: -10px;
+}
